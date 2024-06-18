@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Eating Habits Survey Form</h1>
+    <p id="description">Thank you for your time and for helping us</p>
+    <form method="post" id="survey-form">
+      
+        <div class="x">
+        <label id="name-label" for="name">Name<input id="name" type="text" name="name" placeholder="Enter your name" required/>
+        </label>
+        </div>
+        <div class="x">
+        <label id="email-label" for="email">Email<input id="email" type="email" name="email" placeholder="Enter your email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+        </label>
+        </div>
+        <div class="x">
+        <label id="number-label" for="number">Age<input id="number" type="number" name="number" placeholder="age" min="18" max="120" required/>
+        </label>
+        </div>
+        <div class="x">
+          <label>How many meals per day do you have?<select id="dropdown" name="meals">
+            <option value="">(select one)</option>
+            <option value="1">1 meal</option>
+            <option value="2">2 meals</option>
+            <option value="3">3 meals</option>
+            <option value="4">more than 3, please specify:</option>
+          <input id="dropdown" type="number" name="meals" min="4" max="18" placeholder="+3">
+          </label>
+          </div>
+          <div class="bubbles">
+            <h4>Do you consider that you have healthy eating habits?</h4>
+            <label for="checkbox">
+            <input id="checkbox" type="radio" name="habits" class="inline" value="1" checked />
+            Yes</label>
+            <label for="checkbox">
+            <input id="checkbox" type="radio" name="habits" class="inline" value="2" />
+            No</label>
+            <input id="checkbox" type="radio" name="habits" class="inline" value="3" />
+            I don't know</label>
+            </div>
+
+            <div class="group">
+              <h4>What do you consider to be healthy eating?
+                <span class="tip">(You can leave all boxes empty)</span>
+              </h4>
+              <div>
+              <label>    
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="0" />
+                Eating 3 meals a day
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="1" />
+                Eating 5 portions of vegetables/fruits a day
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="2" />
+                Stop eating after 6pm
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="3" />
+                Drinking diet sodas
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="4" />
+                Intermittent fasting
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="5" />
+                Drinking lactose free milk
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="6" />
+                Eating in a hurry
+              </label>
+              </div>
+              <div>
+              <label>   
+                <input id="check" name="choice" class="input-checkbox" type="checkbox" value="7" />
+                Eating fast-food
+              </label>
+              </div>
+              </div>
+              <div class="group">
+                <h5>In a few line, comment the current topic. Tell us about your eating habits and what you think you could improve:</h5>
+                <textarea id="text" name="comment" rows="6" cols="60" placeholder="What do you think about healthy eating?..."></textarea>
+                </div>
+                <div class="group">
+                  <input type="submit" id="submit">
+                                          
+    
+  </form>
+ </body>
+</html>
